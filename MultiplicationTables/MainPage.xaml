@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MultiplicationTables.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                Text="Please enter any number"
+                SemanticProperties.HeadingLevel="Level5"
+                FontSize="20"
+                HorizontalOptions="Center" />
+
+            <Entry
+                x:Name="txtbxNumber"
+                SemanticProperties.Hint="Enter the number !"
+                Text=""
+                Keyboard="Numeric"
+                MaxLength="3"
+                ClearButtonVisibility="WhileEditing"/>
+
+            <Label
+                x:Name="lblstepper"
+                Text="Multiplication Number 1"
+                SemanticProperties.HeadingLevel="Level5"
+                FontSize="20"
+                HorizontalOptions="Center" />
+
+            <Stepper
+                x:Name="stepper"
+                Minimum="1"
+                Maximum="25"
+                Increment="1"
+                HorizontalOptions="Center"
+                ValueChanged="Stepper_ValueChanged"
+                />
+
+            <Button
+                x:Name="btnCalculate"
+                Text="Execute Table"
+                SemanticProperties.Hint="Execute table"
+                Clicked="OnClicked"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="lblOutput"
+                Text=""
+                SemanticProperties.HeadingLevel="Level3"
+                FontSize="20"
+                HorizontalOptions="Center" />
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
